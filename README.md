@@ -1,6 +1,6 @@
-# map_homepage
+# cwu_gps
 
-A new Flutter project.
+380 project
 
 ## Getting Started
 
