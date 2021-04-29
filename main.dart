@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late GoogleMapController mapController;
+  Set<Marker> _markers = {};
+
+  final LatLng _center = const LatLng(45.521563, -122.677433);
+
+  void _onMapCreated(GoogleMapController controller){
+    setState(() {
+      _markers.add(
+        Marker(markerId: MarkerId('SURC'), position: LatLng(47.00251437, -120.53840126)),
+      );
+    });
+  }
+  /*
+  Future<void> _onMapCreated(GoogleMapController controller) async {
+    mapController = controller;
+
+  }*/
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: GoogleMap(
+          onMapCreated: _onMapCreated,
+          markers: _markers,
+          initialCameraPosition: CameraPosition(
+            target: LatLng(47.00251437, -120.53840126),
+            zoom: 17,
+          ),
+          mapType: MapType.hybrid,
+        ),
+      ),
+    );
+  }
+}
