@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -10,27 +9,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-<<<<<<< Updated upstream
-  GoogleMapController mapController;
-=======
   late GoogleMapController mapController;
-  Set<Marker> _markers = {};
->>>>>>> Stashed changes
 
   final LatLng _center = const LatLng(45.521563, -122.677433);
 
-  void _onMapCreated(GoogleMapController controller){
-    setState(() {
-      _markers.add(
-        Marker(markerId: MarkerId('SURC'), position: LatLng(47.00251437, -120.53840126)),
-      );
-    });
-  }
-  /*
-  Future<void> _onMapCreated(GoogleMapController controller) async {
+  void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
-
-  }*/
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +23,11 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         body: GoogleMap(
           onMapCreated: _onMapCreated,
-          markers: _markers,
           initialCameraPosition: CameraPosition(
             target: LatLng(47.00251437, -120.53840126),
             zoom: 17,
           ),
-          mapType: MapType.hybrid,
+          mapType: MapType.satellite,
         ),
       ),
     );
