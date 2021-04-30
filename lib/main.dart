@@ -11,6 +11,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  bool isSearching = false;
+
   GoogleMapController mapController;
   Set<Marker> _markers = {};
 
@@ -23,6 +25,7 @@ class _MyAppState extends State<MyApp> {
     _markers = cwuBuildings.cwuBuildingMarkers;
   }
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -114,6 +117,24 @@ class _MyAppState extends State<MyApp> {
                 onPressed: () => Scaffold.of(context).openDrawer()
             ),
           ),
+          title: !isSearching ?
+          Text('CWU GPS') : TextField(
+              decoration: InputDecoration(
+                  hintText: 'Searching',
+                  hintStyle: TextStyle(color: Colors.white)
+              )
+
+          ),
+          actions: <Widget>[
+            IconButton(icon: const Icon(Icons.search),
+                onPressed: (){
+                  setState(() {
+                    this.isSearching = !this.isSearching;
+                  });
+
+                }
+            )
+          ],
         ),
       ),
     );
