@@ -1,42 +1,68 @@
-
-import 'package:cwu_gps/CWUBuildingMarkers.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'CWUBuildingMarkers.dart';
+
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
+//This is a stateless widget to get MaterialApp which has a built in navigator object
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: MyAppTwo()
+    );
+  }
+}
+//Wrapped original My app to get state
+class MyAppTwo extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyAppTwo> {
   GoogleMapController mapController;
   Set<Marker> _markers = {};
-
+  bool isSearching = false;
   final LatLng _center = const LatLng(45.521563, -122.677433);
 
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-    var cwuBuildings = new CWUBuildingMarkers();
-    cwuBuildings.addMarkers();
-    _markers = cwuBuildings.cwuBuildingMarkers;
-  }
+  // void _onMapCreated(GoogleMapController controller) {
+  //   mapController = controller;
+  // }
 
+// class _MyAppState extends State<MyApp> {
+//   GoogleMapController mapController;
+//   Set<Marker> _markers = {};
+//
+//   final LatLng _center = const LatLng(45.521563, -122.677433);
+//
+//   // void _onMapCreated(BuildContext context, GoogleMapController controller) {
+//   //   mapController = controller;
+//   //   var cwuBuildings = new CWUBuildingMarkers();
+//   //   cwuBuildings.addMarkers();
+//   //   _markers = cwuBuildings.cwuBuildingMarkers;
+//   }
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: GoogleMap(
-          onMapCreated: _onMapCreated,
+          onMapCreated: (GoogleMapController controller) {    //Made this a lambda function not sure if necessary but guide I was following did it this way
+            mapController = controller;
+            var cwuBuildings = new CWUBuildingMarkers();
+            cwuBuildings.addMarkers(context);
+            _markers = cwuBuildings.cwuBuildingMarkers;
+          } ,
           markers: _markers,
           initialCameraPosition: CameraPosition(
             target: LatLng(47.00251437, -120.53840126),
             zoom: 17,
           ),
-          mapType: MapType.hybrid,
+          mapType: MapType.satellite,
         ),
-        //Hamburger menu
-        drawer: Drawer(
+          //Hamburger menu
+          drawer: Drawer (
           child: ListView(
             padding: EdgeInsets.zero,
             children: <Widget>[
@@ -114,8 +140,28 @@ class _MyAppState extends State<MyApp> {
                 onPressed: () => Scaffold.of(context).openDrawer()
             ),
           ),
+          title: !isSearching ?
+          Text('CWU GPS') : TextField(
+              decoration: InputDecoration(
+                  hintText: 'Searching',
+                  hintStyle: TextStyle(color: Colors.white)
+              )
+
+          ),
+          actions: <Widget>[
+            IconButton(icon: const Icon(Icons.search),
+                onPressed: (){
+                  setState(() {
+                    this.isSearching = !this.isSearching;
+                  });
+
+                }
+            )
+          ],
         ),
       ),
     );
   }
 }
+
+
