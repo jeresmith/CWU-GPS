@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import 'CreateDrawer.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -9,7 +11,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late GoogleMapController mapController;
+  GoogleMapController mapController;
 
   final LatLng _center = const LatLng(45.521563, -122.677433);
 
@@ -28,6 +30,16 @@ class _MyAppState extends State<MyApp> {
             zoom: 17,
           ),
           mapType: MapType.satellite,
+        ),
+        drawer: CreateDrawer(mapController),
+        appBar: AppBar(
+          leading: Builder(
+            builder: (context) => // Ensure Scaffold is in context
+            IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: () => Scaffold.of(context).openDrawer()
+            ),
+          ),
         ),
       ),
     );
