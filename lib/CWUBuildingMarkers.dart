@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'main.dart';
-import 'SecondRoute.dart';
+import 'Routes/SecondRoute.dart';
 class CWUBuildingMarkers {
   //List of all CWU Building Markers
   // If you want to add a building add it to the function add Markers
