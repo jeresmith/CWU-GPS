@@ -26,6 +26,7 @@ class _MyAppState extends State<MyAppTwo> {
   bool isSearching = false;
   final LatLng _center = const LatLng(45.521563, -122.677433);
 
+
   // void _onMapCreated(GoogleMapController controller) {
   //   mapController = controller;
   // }
@@ -151,9 +152,11 @@ class _MyAppState extends State<MyAppTwo> {
           actions: <Widget>[
             IconButton(icon: const Icon(Icons.search),
                 onPressed: (){
-                  setState(() {
-                    this.isSearching = !this.isSearching;
-                  });
+                  showSearch(context: context, delegate: CustomSearchClass());
+                  // setState(() {
+                  //   this.isSearching = !this.isSearching;
+                  // }
+                  // );
 
                 }
             )
@@ -162,6 +165,58 @@ class _MyAppState extends State<MyAppTwo> {
       ),
     );
   }
+}
+
+class CustomSearchClass extends SearchDelegate<String> {
+  final buildings = [
+    "Surc",
+    "Samuelson",
+    "Black Hall"
+  ];
+  final recentBuildings = [
+    "Surc"
+  ];
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return[
+      IconButton(icon: Icon(Icons.clear), onPressed:(){
+        query = " ";
+      })
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    //
+    return IconButton(icon: AnimatedIcon(
+      icon: AnimatedIcons.menu_arrow,
+      progress: transitionAnimation,
+    ),
+        onPressed: (){
+      close(context, null);
+        });
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+
+    final suggestionList = query.isEmpty ? recentBuildings:buildings;
+    
+    return ListView.builder(itemBuilder: (context, index) => ListTile(
+      leading: Icon(Icons.location_city),
+      title: Text(suggestionList[index]),
+    ),
+      itemCount: suggestionList.length,
+    );
+
+  }
+
+
 }
 
 
