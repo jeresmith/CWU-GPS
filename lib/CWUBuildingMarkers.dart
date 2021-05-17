@@ -1,3 +1,4 @@
+import 'package:cwu_gps/Routes/BouillonRoute.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'main.dart';
@@ -106,7 +107,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.00084444542964, -120.53862030307009),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => BouillonRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Lind'),
