@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'CreateDrawer.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'CWUBuildingMarkers.dart';
 
@@ -20,29 +21,16 @@ class MyAppTwo extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyAppTwo> {
+
+class _MyAppState extends State<MyApp> {
+  bool isSearching = false;
+
+
   GoogleMapController mapController;
   Set<Marker> _markers = {};
   bool isSearching = false;
   final LatLng _center = const LatLng(45.521563, -122.677433);
 
-
-  // void _onMapCreated(GoogleMapController controller) {
-  //   mapController = controller;
-  // }
-
-// class _MyAppState extends State<MyApp> {
-//   GoogleMapController mapController;
-//   Set<Marker> _markers = {};
-//
-//   final LatLng _center = const LatLng(45.521563, -122.677433);
-//
-//   // void _onMapCreated(BuildContext context, GoogleMapController controller) {
-//   //   mapController = controller;
-//   //   var cwuBuildings = new CWUBuildingMarkers();
-//   //   cwuBuildings.addMarkers();
-//   //   _markers = cwuBuildings.cwuBuildingMarkers;
-//   }
 
   @override
   Widget build(BuildContext context) {
@@ -62,76 +50,11 @@ class _MyAppState extends State<MyAppTwo> {
           ),
           mapType: MapType.satellite,
         ),
-          //Hamburger menu
-          drawer: Drawer (
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              DrawerHeader(
-                child: Text('Buildings'),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-              ),
-              ListTile(
-                title: Text('Surc'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Samuelson'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Library'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Sue Lombard'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Parking lot'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Black Hall'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Barto Hall'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Kamola Hall'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Green Hall'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Dugmore Hall'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Wilson Hall'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Quigley Hall'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Sparks Hall'),
-                onTap: () {},
-              ),
-              ListTile(
-                title: Text('Meisner Hall'),
-                onTap: () {},
-              ),
-            ],
-          ),
-        ),
+
+
+        //Hamburger menu
+        drawer: CreateDrawer(mapController),
+
         //Blue App bar at the top
         appBar: AppBar(
           leading: Builder(
@@ -152,6 +75,7 @@ class _MyAppState extends State<MyAppTwo> {
           actions: <Widget>[
             IconButton(icon: const Icon(Icons.search),
                 onPressed: (){
+
                   showSearch(context: context, delegate: CustomSearchClass());
                   // setState(() {
                   //   this.isSearching = !this.isSearching;
