@@ -18,8 +18,8 @@ class AquaticRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/aquatic1.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/Aquatic1.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -30,8 +30,8 @@ class AquaticRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/aquatic2.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/Aquatic2.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),

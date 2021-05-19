@@ -19,7 +19,7 @@ class FarrellRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Farrell1.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -31,7 +31,7 @@ class FarrellRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Farrell2.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -42,7 +42,7 @@ class FarrellRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Farrell3.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -52,8 +52,8 @@ class FarrellRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Farrell4.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/Farrell4.JPG"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),

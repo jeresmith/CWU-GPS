@@ -19,7 +19,7 @@ class DiscoveryRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Discovery 1st Floor.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -31,7 +31,7 @@ class DiscoveryRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Discovery 2nd Floor.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -42,7 +42,7 @@ class DiscoveryRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Discovery 3rd Floor.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -53,7 +53,7 @@ class DiscoveryRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Discovery 4th Floor.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),

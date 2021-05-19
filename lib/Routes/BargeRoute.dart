@@ -19,7 +19,7 @@ class BargeRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Barge1.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -31,7 +31,7 @@ class BargeRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Barge2.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -42,7 +42,7 @@ class BargeRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Barge3.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -53,7 +53,7 @@ class BargeRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Barge4.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),

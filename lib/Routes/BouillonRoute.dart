@@ -19,7 +19,7 @@ class BouillonRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Bou1.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -31,7 +31,7 @@ class BouillonRoute extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
                     image: AssetImage("images/Bou2.jpg"),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
