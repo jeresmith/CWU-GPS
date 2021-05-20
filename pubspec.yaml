@@ -75,8 +75,8 @@ flutter:
     - images/randall4.jpg
     - images/psych1.jpg
     - images/psych2.jpg
-    - images/phych3.jpg
-    - images/psych.4.jpg
+    - images/psych3.jpg
+    - images/psych4.jpg
     - images/physical1.jpg
     - images/physical2.jpg
     - images/physical3.jpg
@@ -105,6 +105,8 @@ flutter:
     - images/hogue1.jpg
     - images/hogue2.jpg
     - images/hogue3.jpg
+    - images/SURC1.jpg
+    - images/SURC2.jpg
 
 
 

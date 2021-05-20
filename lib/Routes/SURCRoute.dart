@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class PsychRoute extends StatelessWidget {
+class SURCRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Psychology Building"),
+        title: Text("SURC"),
       ),
       body: ListView(
         children: [
@@ -18,43 +18,24 @@ class PsychRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/psych1.jpg"),
+                    image: AssetImage("images/SURC1.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.all(6.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
-                    image: AssetImage("images/psych2.jpg"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(6.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
-                    image: AssetImage("images/psych3.jpg"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(6.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
-                    image: AssetImage("images/psych4.jpg"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              )
 
-              //2nd Image of Slide
+              //2nd Image of Slider
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/SURC2.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
             ],
 
             //Slider Container properties
@@ -82,10 +63,10 @@ class PsychRoute extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             new Container(
-              child: new Text('Addresss'), //Text
+              child: new Text('Addresss: Temp'), //Text
             ),
             new Container(
-              child: new Text('Phone Number',
+              child: new Text('Phone Number: Temp',
                   textAlign: TextAlign.justify),
             ),
           ],
@@ -95,23 +76,3 @@ class PsychRoute extends StatelessWidget {
     );
   }
 }
-
-// class SecondRoute extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("Second Route"),
-//       ),
-//       body: Center(
-//         child: ElevatedButton(
-//           onPressed: () {
-//             Navigator.pop(context);
-//           },
-//
-//           child: Text('Go back!'),
-//         ),
-//       ),
-//     );
-//   }
-// }
