@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class SecondRoute extends StatelessWidget {
+class SamuelsonRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Samuelson"),
+        title: Text("Samuelson Building"),
       ),
       body: ListView(
         children: [
@@ -18,8 +18,8 @@ class SecondRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img1.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/Samuelson1.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -30,8 +30,8 @@ class SecondRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img2.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/Samuelson2.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),

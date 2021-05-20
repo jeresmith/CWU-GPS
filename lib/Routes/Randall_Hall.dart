@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class SecondRoute extends StatelessWidget {
+class RandallRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,8 +18,8 @@ class SecondRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img1.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/randall1.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -30,11 +30,31 @@ class SecondRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img2.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/randall2.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/randall3.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/randall4.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              )
 
             ],
 

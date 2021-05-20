@@ -1,4 +1,5 @@
 import 'package:cwu_gps/Routes/BouillonRoute.dart';
+import 'package:cwu_gps/Routes/McConnell_Hall.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'main.dart';
@@ -8,6 +9,17 @@ import 'Routes/AquaticRoute.dart';
 import 'Routes/FarrellRoute.dart';
 import 'Routes/BargeRoute.dart';
 import 'Routes/DiscoveryRoute.dart';
+import 'Routes/Science_Building.dart';
+import 'Routes/Randall_Hall.dart';
+import 'Routes/Psychology_Building.dart';
+import 'Routes/Nicholson_Pavillion.dart';
+import 'Routes/Music_Building.dart';
+import 'Routes/Lind_Hall.dart';
+import 'Routes/Literature_Building.dart';
+import 'Routes/Library.dart';
+import 'Routes/Samuelson.dart';
+import 'Routes/Houge_Hall.dart';
+
 
 class CWUBuildingMarkers {
   //List of all CWU Building Markers
@@ -29,7 +41,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.00132552932142, -120.54041518469886),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => SamuelsonRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Discovery'),
@@ -43,14 +55,14 @@ class CWUBuildingMarkers {
         position: LatLng(47.005174062776526, -120.54117156764106),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => LibraryRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Science'),
         position: LatLng(47.00321912874942, -120.541680623801),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => ScienceRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Dean'),
@@ -85,7 +97,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.00051880219437, -120.54161675834392),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => McconnellRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Barge Hall'),
@@ -120,21 +132,21 @@ class CWUBuildingMarkers {
         position: LatLng(47.000239599759986, -120.53864141929905),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => LindRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Language and Lit'),
         position: LatLng(47.00483932753819, -120.5401023722046),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => LanguageRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Randall'),
         position: LatLng(47.00566545465137, -120.53878305109491),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => RandallRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Michaelsen'),
@@ -148,7 +160,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.006627367382926, -120.5401881142477),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => PsychRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Aquatics'),
@@ -169,14 +181,14 @@ class CWUBuildingMarkers {
         position: LatLng(47.00711397546175, -120.53801137270962),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => NicholsonRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Hogue Tech'),
         position: LatLng(47.00565214127922, -120.53636143417745),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => HogueRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Jerilyn'),

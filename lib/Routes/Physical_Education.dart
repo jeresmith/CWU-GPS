@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class SecondRoute extends StatelessWidget {
+class PhysicalRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,23 +18,43 @@ class SecondRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img1.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/physical1.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
-
-              //2nd Image of Slider
               Container(
                 margin: EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img2.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/physical2.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/physical3.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/physical4.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
+
 
             ],
 

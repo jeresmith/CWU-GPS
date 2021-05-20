@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class SecondRoute extends StatelessWidget {
+class LibraryRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,23 +18,34 @@ class SecondRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img1.jpg"),
+                    image: AssetImage("images/library1.jpg"),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-
-              //2nd Image of Slider
               Container(
                 margin: EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img2.jpg"),
+                    image: AssetImage("images/library2.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ), Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/library3.jpg"),
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
+
+
+              //2nd Image of Slider
+
 
             ],
 

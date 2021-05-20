@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class SecondRoute extends StatelessWidget {
+class MusicRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,23 +18,44 @@ class SecondRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img1.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/music1.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
-
-              //2nd Image of Slider
               Container(
                 margin: EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/img2.jpg"),
-                    fit: BoxFit.cover,
+                    image: AssetImage("images/music2.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/music3.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/music4.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              )
+
+              //2nd Image of Slider
+
 
             ],
 
