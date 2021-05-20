@@ -1,4 +1,5 @@
 import 'package:cwu_gps/Routes/BouillonRoute.dart';
+import 'package:cwu_gps/Routes/SURCRoute.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'Routes/SecondRoute.dart';
@@ -19,7 +20,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.00251437, -120.53840126),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => SURCRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Samuelson'),
