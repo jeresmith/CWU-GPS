@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class BouillonRoute extends StatelessWidget {
+class DiscoveryRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bouillon Hall"),
+        title: Text("Discovery Hall"),
       ),
       body: ListView(
         children: [
@@ -18,7 +18,7 @@ class BouillonRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Bou1.jpg"),
+                    image: AssetImage("images/Discovery 1st Floor.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -30,10 +30,30 @@ class BouillonRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Bou2.jpg"),
-
+                    image: AssetImage("images/Discovery 2nd Floor.jpg"),
                     fit: BoxFit.contain,
+                  ),
+                ),
+              ),
 
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/Discovery 3rd Floor.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/Discovery 4th Floor.jpg"),
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -65,10 +85,10 @@ class BouillonRoute extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             new Container(
-              child: new Text('Addresss: Bouillon'), //Text
+              child: new Text('Addresss: Temp'), //Text
             ),
             new Container(
-              child: new Text('Phone Number: Bouillon',
+              child: new Text('Phone Number: Temp',
                   textAlign: TextAlign.justify),
             ),
           ],
@@ -78,23 +98,3 @@ class BouillonRoute extends StatelessWidget {
     );
   }
 }
-
-// class SecondRoute extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("Second Route"),
-//       ),
-//       body: Center(
-//         child: ElevatedButton(
-//           onPressed: () {
-//             Navigator.pop(context);
-//           },
-//
-//           child: Text('Go back!'),
-//         ),
-//       ),
-//     );
-//   }
-// }

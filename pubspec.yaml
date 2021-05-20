@@ -50,6 +50,28 @@ flutter:
     - images/img2.jpg
     - images/Bou1.jpg
     - images/Bou2.jpg
+<<<<<<< HEAD
+=======
+    - images/Aquatic1.jpg
+    - images/Aquatic2.jpg
+    - images/Barge1.jpg
+    - images/Barge2.jpg
+    - images/Barge3.jpg
+    - images/Barge4.jpg
+    - images/Farrell1.jpg
+    - images/Farrell2.jpg
+    - images/Farrell3.jpg
+    - images/Farrell4.jpg
+    - images/Discovery 1st Floor.jpg
+    - images/Discovery 2nd Floor.jpg
+    - images/Discovery 3rd Floor.jpg
+    - images/Discovery 4th Floor.jpg
+
+
+
+
+
+>>>>>>> 294f47c14f5f0f3b9a941940b8fe30fb75667303
 
   # To add assets to your application, add an assets section, like this:
   # assets:

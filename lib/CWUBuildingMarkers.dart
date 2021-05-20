@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'main.dart';
 import 'Routes/SecondRoute.dart';
+import 'Routes/SecondRoute.dart';
+import 'Routes/AquaticRoute.dart';
+import 'Routes/FarrellRoute.dart';
+import 'Routes/BargeRoute.dart';
+import 'Routes/DiscoveryRoute.dart';
+
 class CWUBuildingMarkers {
   //List of all CWU Building Markers
   // If you want to add a building add it to the function add Markers
@@ -30,7 +36,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.002181595909654, -120.54023815890388),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => DiscoveryRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Library'),
@@ -86,7 +92,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.00029758226216, -120.54211334947867),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => BargeRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Shaw-Smyser'),
@@ -149,7 +155,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.00776277933699, -120.53911772164902),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => AquaticRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Purser'),
@@ -178,6 +184,13 @@ class CWUBuildingMarkers {
         onTap: () { Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => SecondRoute()));}));
+
+    cwuBuildingMarkers.add(Marker(
+        markerId: MarkerId('Farrell'),
+        position: LatLng(47.005112, -120.542751),
+        onTap: () { Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => FarrellRoute()));}));
 
 
   }

@@ -11,20 +11,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: MyAppTwo()
+        home: MyAppStateful()
     );
   }
 }
 
-
 //Wrapped original My app to get state
-class MyAppTwo extends StatefulWidget {
+class MyAppStateful extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 
-class _MyAppState extends State<MyAppTwo> {
+class _MyAppState extends State<MyAppStateful> {
+
   bool isSearching = false;
 
 
