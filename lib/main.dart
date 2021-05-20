@@ -7,15 +7,24 @@ import 'CWUBuildingMarkers.dart';
 void main() => runApp(MyApp());
 
 //This is a stateless widget to get MaterialApp which has a built in navigator object
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: MyAppTwo()
+    );
+  }
+}
+
 
 //Wrapped original My app to get state
-class MyApp extends StatefulWidget {
+class MyAppTwo extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyAppTwo> {
   bool isSearching = false;
 
 
