@@ -52,7 +52,7 @@ class FarrellRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Farrell4.JPG"),
+                    image: AssetImage("images/Farrell4.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
