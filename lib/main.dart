@@ -24,6 +24,7 @@ class MyAppStateful extends StatefulWidget {
 
 
 class _MyAppState extends State<MyAppStateful> {
+
   bool isSearching = false;
 
 

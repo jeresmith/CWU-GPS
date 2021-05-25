@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class BouillonRoute extends StatelessWidget {
+class HogueRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bouillon Hall"),
+        title: Text("Houge Hall"),
       ),
       body: ListView(
         children: [
@@ -18,25 +18,34 @@ class BouillonRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Bou1.jpg"),
+                    image: AssetImage("images/hogue1.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
-
-              //2nd Image of Slider
               Container(
                 margin: EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Bou2.jpg"),
-
+                    image: AssetImage("images/hogue2.jpg"),
                     fit: BoxFit.contain,
-
                   ),
                 ),
               ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/hogue3.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              )
+
+              //2nd Image of Slider
+
 
             ],
 
@@ -65,10 +74,10 @@ class BouillonRoute extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             new Container(
-              child: new Text('Addresss: Bouillon'), //Text
+              child: new Text('Addresss'), //Text
             ),
             new Container(
-              child: new Text('Phone Number: Bouillon',
+              child: new Text('Phone Number',
                   textAlign: TextAlign.justify),
             ),
           ],
