@@ -25,6 +25,29 @@ class LindRoute extends StatelessWidget {
                 ),
               ),
 
+              Container(
+
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/lind2.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Container(
+
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/lind3.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
 
               //2nd Image of Slider
 

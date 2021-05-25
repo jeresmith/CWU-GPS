@@ -4,6 +4,8 @@ import 'package:cwu_gps/Routes/McConnell_Hall.dart';
 import 'package:cwu_gps/Routes/SURCRoute.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'main.dart';
+import 'Routes/SecondRoute.dart';
 import 'Routes/SecondRoute.dart';
 import 'Routes/AquaticRoute.dart';
 import 'Routes/FarrellRoute.dart';
@@ -21,6 +23,7 @@ import 'Routes/Samuelson.dart';
 import 'Routes/Houge_Hall.dart';
 import 'Routes/BlackRoute.dart';
 import 'Routes/HebelerRoute.dart';
+
 
 class CWUBuildingMarkers {
   //List of all CWU Building Markers

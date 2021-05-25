@@ -1,8 +1,10 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'CreateDrawer.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'CWUBuildingMarkers.dart';
-
+import 'SearchBar.dart';
 
 void main() => runApp(MyApp());
 
@@ -78,11 +80,7 @@ class _MyAppState extends State<MyAppStateful> {
             IconButton(icon: const Icon(Icons.search),
                 onPressed: (){
 
-                  showSearch(context: context, delegate: CustomSearchClass());
-                  // setState(() {
-                  //   this.isSearching = !this.isSearching;
-                  // }
-                  // );
+                  showSearch(context: context, delegate: CustomSearchClass(mapController));
 
                 }
             )
@@ -92,57 +90,4 @@ class _MyAppState extends State<MyAppStateful> {
     );
   }
 }
-
-class CustomSearchClass extends SearchDelegate<String> {
-  final buildings = [
-    "Surc",
-    "Samuelson",
-    "Black Hall"
-  ];
-  final recentBuildings = [
-    "Surc"
-  ];
-  @override
-  List<Widget> buildActions(BuildContext context) {
-    return[
-      IconButton(icon: Icon(Icons.clear), onPressed:(){
-        query = " ";
-      })
-    ];
-  }
-
-  @override
-  Widget buildLeading(BuildContext context) {
-    //
-    return IconButton(icon: AnimatedIcon(
-      icon: AnimatedIcons.menu_arrow,
-      progress: transitionAnimation,
-    ),
-        onPressed: (){
-      close(context, null);
-        });
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-
-    final suggestionList = query.isEmpty ? recentBuildings:buildings;
-    
-    return ListView.builder(itemBuilder: (context, index) => ListTile(
-      leading: Icon(Icons.location_city),
-      title: Text(suggestionList[index]),
-    ),
-      itemCount: suggestionList.length,
-    );
-
-  }
-
-
-}
-
 
