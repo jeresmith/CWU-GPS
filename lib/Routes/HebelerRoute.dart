@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class LindRoute extends StatelessWidget {
+class HebelerRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Lind Hall"),
+        title: Text("Hebeler Hall"),
       ),
       body: ListView(
         children: [
@@ -14,43 +14,38 @@ class LindRoute extends StatelessWidget {
             items: [
               //1st Image of Slider
               Container(
-
                 margin: EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/lind1.jpg"),
+                    image: AssetImage("images/Hebeler1.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
-
-              Container(
-
-                margin: EdgeInsets.all(6.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
-                    image: AssetImage("images/lind2.jpg"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-              Container(
-
-                margin: EdgeInsets.all(6.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
-                  image: DecorationImage(
-                    image: AssetImage("images/lind3.jpg"),
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-
 
               //2nd Image of Slider
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/Hebeler2.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
 
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/Hebeler3.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
             ],
 
             //Slider Container properties
@@ -78,10 +73,10 @@ class LindRoute extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             new Container(
-              child: new Text('Addresss'), //Text
+              child: new Text('Addresss: Temp'), //Text
             ),
             new Container(
-              child: new Text('Phone Number',
+              child: new Text('Phone Number: Temp',
                   textAlign: TextAlign.justify),
             ),
           ],
@@ -91,23 +86,3 @@ class LindRoute extends StatelessWidget {
     );
   }
 }
-
-// class SecondRoute extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("Second Route"),
-//       ),
-//       body: Center(
-//         child: ElevatedButton(
-//           onPressed: () {
-//             Navigator.pop(context);
-//           },
-//
-//           child: Text('Go back!'),
-//         ),
-//       ),
-//     );
-//   }
-// }

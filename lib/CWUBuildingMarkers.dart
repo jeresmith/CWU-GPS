@@ -21,6 +21,8 @@ import 'Routes/Literature_Building.dart';
 import 'Routes/Library.dart';
 import 'Routes/Samuelson.dart';
 import 'Routes/Houge_Hall.dart';
+import 'Routes/BlackRoute.dart';
+import 'Routes/HebelerRoute.dart';
 
 
 class CWUBuildingMarkers {
@@ -85,7 +87,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.001585294823165, -120.54254095843785),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => HebelerRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Mitchell'),
@@ -120,7 +122,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.00186402691532, -120.53862452631579),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => BlackRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Bouillon'),
@@ -197,7 +199,7 @@ class CWUBuildingMarkers {
         position: LatLng(47.00569875782784, -120.53466667244288),
         onTap: () { Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SecondRoute()));}));
+            MaterialPageRoute(builder: (context) => MusicRoute()));}));
 
     cwuBuildingMarkers.add(Marker(
         markerId: MarkerId('Farrell'),
