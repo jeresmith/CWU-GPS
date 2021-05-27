@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'CreateDrawer.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -24,8 +26,27 @@ class MyAppStateful extends StatefulWidget {
 
 
 class _MyAppState extends State<MyAppStateful> {
-
+  //BitmapDescriptor need to be loaded before the map loads.
+  BitmapDescriptor icon1;
+  BitmapDescriptor icon2;
+  BitmapDescriptor icon3;
   bool isSearching = false;
+   @override
+   void initState() {
+  //   //Uses getBytesFromAsset method in CWUBuildingMarkers to resize the png.
+      getBytesFromAssetHelper();
+     }
+  //Used to load data during init state uses getBytesFromAsset method in CWUBuildingMarkers to resize png images
+  void getBytesFromAssetHelper() async  {
+    CWUBuildingMarkers resize = new CWUBuildingMarkers();
+    final Uint8List firstIcon = await (resize.getBytesFromAsset('images/motarboard.png', 150));
+    icon1 = BitmapDescriptor.fromBytes(firstIcon);
+    final Uint8List secondIcon = await (resize.getBytesFromAsset('images/house.png', 150));
+    icon2 = BitmapDescriptor.fromBytes(secondIcon);
+    final Uint8List thirdIcon = await  (resize.getBytesFromAsset('images/food.png', 150));
+    icon3 = BitmapDescriptor.fromBytes(thirdIcon);
+  }
+
 
 
   GoogleMapController mapController;
@@ -42,7 +63,7 @@ class _MyAppState extends State<MyAppStateful> {
           onMapCreated: (GoogleMapController controller) {    //Made this a lambda function not sure if necessary but guide I was following did it this way
             mapController = controller;
             var cwuBuildings = new CWUBuildingMarkers();
-            cwuBuildings.addMarkers(context);
+            cwuBuildings.addMarkers(context, icon1, icon2, icon3);
             _markers = cwuBuildings.cwuBuildingMarkers;
           } ,
           markers: _markers,
