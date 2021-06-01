@@ -25,6 +25,8 @@ dependencies:
     sdk: flutter
   google_maps_flutter: ^2.0.3
   carousel_slider: ^2.3.1
+  location:
+  flutter_polyline_points:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -118,6 +120,9 @@ flutter:
     - images/Hebeler1.jpg
     - images/Hebeler2.jpg
     - images/Hebeler3.jpg
+    - images/motarboard.png
+    - images/house.png
+    - images/food.png
 
 
 
