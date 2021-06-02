@@ -167,10 +167,10 @@ class CustomSearchClass extends SearchDelegate<String> {
 
     return ListView.builder(itemBuilder: (context, index) => ListTile(
       onTap: (){
-        var s = buildings[index];
-        // print(map[s].getLat());
+        var s = buildings.where((p)=>p.startsWith(query)).toList()[index];
+        print(map[s].getLat());
         updateLocation(map[s].getLat(), map[s].getlong()); Navigator.pop(context);
-        // showResults(context);
+
       },
       leading: Icon(Icons.location_city),
       title: Text(suggestionList[index]),
