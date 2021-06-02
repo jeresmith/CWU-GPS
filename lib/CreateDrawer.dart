@@ -256,6 +256,7 @@ class CreateDrawer extends StatelessWidget{
       ),
     );
   }
+
   updateLocation(double x, double y) {
     mapController.animateCamera(
       CameraUpdate.newCameraPosition(

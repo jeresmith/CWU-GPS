@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class FarrellRoute extends StatelessWidget {
+class BlackRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Farrell Hall"),
+        title: Text("Black Hall"),
       ),
       body: ListView(
         children: [
@@ -18,7 +18,7 @@ class FarrellRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Farrell1.jpg"),
+                    image: AssetImage("images/Black1.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -30,33 +30,78 @@ class FarrellRoute extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Farrell2.jpg"),
+                    image: AssetImage("images/Black2.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
-
               Container(
                 margin: EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Farrell3.jpg"),
+                    image: AssetImage("images/Black3.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
 
+              //2nd Image of Slider
               Container(
                 margin: EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.0),
                   image: DecorationImage(
-                    image: AssetImage("images/Farrell4.jpg"),
+                    image: AssetImage("images/Black4.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/Black5.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
+              //2nd Image of Slider
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/Black6.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/Black7.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
+              //2nd Image of Slider
+              Container(
+                margin: EdgeInsets.all(6.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.0),
+                  image: DecorationImage(
+                    image: AssetImage("images/Black8.jpg"),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+
 
             ],
 
