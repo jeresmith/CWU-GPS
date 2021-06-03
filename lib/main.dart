@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'CreateDrawer.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'CWUBuildingMarkers.dart';
-
+import 'SearchBar.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,12 +45,19 @@ class _MyAppState extends State<MyAppStateful> {
     icon2 = BitmapDescriptor.fromBytes(secondIcon);
     final Uint8List thirdIcon = await  (resize.getBytesFromAsset('images/food.png', 150));
     icon3 = BitmapDescriptor.fromBytes(thirdIcon);
+    //This code fixes the double run bug for markers to show.
+    //Markers were loading to slowing so needed to be made sooner in the program for markers:
+    resize.addMarkers(context, icon1, icon2, icon3);
+    setState((){
+      _markers = resize.cwuBuildingMarkers;
+      print("items ready and set state");
+    });
   }
-
-
 
   GoogleMapController mapController;
   Set<Marker> _markers = {};
+
+
 
   final LatLng _center = const LatLng(45.521563, -122.677433);
 
@@ -62,18 +69,16 @@ class _MyAppState extends State<MyAppStateful> {
         body: GoogleMap(
           onMapCreated: (GoogleMapController controller) {    //Made this a lambda function not sure if necessary but guide I was following did it this way
             mapController = controller;
-            var cwuBuildings = new CWUBuildingMarkers();
-            cwuBuildings.addMarkers(context, icon1, icon2, icon3);
-            _markers = cwuBuildings.cwuBuildingMarkers;
           } ,
           markers: _markers,
+
           initialCameraPosition: CameraPosition(
             target: LatLng(47.00251437, -120.53840126),
             zoom: 17,
+
           ),
           mapType: MapType.satellite,
         ),
-
 
         //Hamburger menu
         drawer: CreateDrawer(mapController),
@@ -99,7 +104,7 @@ class _MyAppState extends State<MyAppStateful> {
             IconButton(icon: const Icon(Icons.search),
                 onPressed: (){
 
-                  showSearch(context: context, delegate: CustomSearchClass());
+                  showSearch(context: context, delegate: CustomSearchClass(mapController));
                   // setState(() {
                   //   this.isSearching = !this.isSearching;
                   // }
@@ -114,56 +119,6 @@ class _MyAppState extends State<MyAppStateful> {
   }
 }
 
-class CustomSearchClass extends SearchDelegate<String> {
-  final buildings = [
-    "Surc",
-    "Samuelson",
-    "Black Hall"
-  ];
-  final recentBuildings = [
-    "Surc"
-  ];
-  @override
-  List<Widget> buildActions(BuildContext context) {
-    return[
-      IconButton(icon: Icon(Icons.clear), onPressed:(){
-        query = " ";
-      })
-    ];
-  }
 
-  @override
-  Widget buildLeading(BuildContext context) {
-    //
-    return IconButton(icon: AnimatedIcon(
-      icon: AnimatedIcons.menu_arrow,
-      progress: transitionAnimation,
-    ),
-        onPressed: (){
-      close(context, null);
-        });
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-
-    final suggestionList = query.isEmpty ? recentBuildings:buildings;
-    
-    return ListView.builder(itemBuilder: (context, index) => ListTile(
-      leading: Icon(Icons.location_city),
-      title: Text(suggestionList[index]),
-    ),
-      itemCount: suggestionList.length,
-    );
-
-  }
-
-
-}
 
 
