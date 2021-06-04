@@ -84,7 +84,6 @@ class CustomSearchClass extends SearchDelegate<String> {
     'Dorothy Pursuer Hall':new Coordinates(47.00701, -120.53920),
     'Farrell Hall':new Coordinates(47.00513,-120.54276),
     'Green Hall':new Coordinates(47.00868,-120.53403),
-
     'Hebeler Hall':new Coordinates(47.00164,-120.54253),
     'Hertz Hall':new Coordinates(47.00225,-120.54133),
     'Hitchcock Hall':new Coordinates(47.00348,-120.53597),
