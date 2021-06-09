@@ -13,11 +13,14 @@ class CreateDrawer extends StatelessWidget{
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
+          Container(
+            height: 100,
+          child: DrawerHeader(
             child: Text('Buildings'),
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
+          ),
           ),
           Divider(),
           Text("Classes", style: TextStyle(
